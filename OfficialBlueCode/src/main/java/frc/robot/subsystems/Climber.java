@@ -20,6 +20,7 @@ public class Climber extends SubsystemBase {
   public WPI_VictorSPX ClimberAnal = new WPI_VictorSPX(0);
   public WPI_TalonSRX ClimberRight = new WPI_TalonSRX(0);
   public WPI_TalonSRX ClimberLeft = new WPI_TalonSRX(0);
+  
   public Climber() {
     ClimberLeft.follow(ClimberRight);
     ClimberLeft.setInverted(true);

@@ -13,6 +13,8 @@ import static frc.robot.Constants.DRIVE_CONST.RIGHT_ENCODED_CAN;
 import static frc.robot.Constants.DRIVE_CONST.RIGHT_FOLLOW_CAN;
 import static frc.robot.Constants.STICK_CONST.R1;
 
+import java.net.SocketTimeoutException;
+
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.Timer;
@@ -35,6 +37,7 @@ public WPI_TalonSRX leftFollow = new WPI_TalonSRX(LEFT_FOLLOW_CAN);
     rightEncoded.set(y);
     
   }
+  
   // public  void auto(){
   //  drive(-0.5, -0.4);
   //  Timer.delay(6);
