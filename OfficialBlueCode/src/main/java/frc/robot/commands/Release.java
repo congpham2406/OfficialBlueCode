@@ -22,8 +22,6 @@ public class Release extends CommandBase {
   @Override
   public void initialize() {
     m_grabber.grab(1);
-    Timer.delay(4);
-    m_grabber.grab(0);
   }
 
   // Called every time the scheduler runs while the command is scheduled.

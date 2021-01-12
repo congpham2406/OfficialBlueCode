@@ -22,9 +22,7 @@ public class GoStraight extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    m_drivebase.drive(0.5, 0.5);
-    Timer.delay(69); //Need to fix value
-    m_drivebase.drive(0.0, 0.0);
+    m_drivebase.drive(-0.5, -0.4);
   }
 
   // Called every time the scheduler runs while the command is scheduled.

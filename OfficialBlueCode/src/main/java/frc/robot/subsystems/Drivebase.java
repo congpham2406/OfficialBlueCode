@@ -35,9 +35,9 @@ public WPI_TalonSRX leftFollow = new WPI_TalonSRX(LEFT_FOLLOW_CAN);
     rightEncoded.set(y);
     
   }
-  public  void auto(){
-   drive(-0.5, -0.4);
-   Timer.delay(6);
+  // public  void auto(){
+  //  drive(-0.5, -0.4);
+  //  Timer.delay(6);
    //drive(0,0);
    //Timer.delay(0.5);
    //drive(-0.4,0.4);
@@ -64,7 +64,7 @@ public WPI_TalonSRX leftFollow = new WPI_TalonSRX(LEFT_FOLLOW_CAN);
    //Timer.delay(1.5);
    //drive(0,0);
    
-}
+// }
   @Override
   public void periodic() {
     if (RobotContainer.stick.getRawButton(R1)) {
