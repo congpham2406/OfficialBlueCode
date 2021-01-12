@@ -7,14 +7,14 @@
 
 package frc.robot.subsystems;
 
-import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+import static frc.robot.Constants.STICK_CONST.L1;
+import static frc.robot.Constants.STICK_CONST.L2;
+
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotContainer;
-import static frc.robot.Constants.STICK_CONST.*;
-import static frc.robot.Constants.ARM_CONST.*;
 
 public class Climber extends SubsystemBase {
   public WPI_VictorSPX ClimberAnal = new WPI_VictorSPX(0);

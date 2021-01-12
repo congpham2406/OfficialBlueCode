@@ -7,15 +7,17 @@
 
 package frc.robot.subsystems;
 
+import static frc.robot.Constants.DRIVE_CONST.LEFT_ENCODED_CAN;
+import static frc.robot.Constants.DRIVE_CONST.LEFT_FOLLOW_CAN;
+import static frc.robot.Constants.DRIVE_CONST.RIGHT_ENCODED_CAN;
+import static frc.robot.Constants.DRIVE_CONST.RIGHT_FOLLOW_CAN;
+import static frc.robot.Constants.STICK_CONST.R1;
+
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import frc.robot.RobotContainer;
-import frc.robot.Robot;
-import static frc.robot.Constants.STICK_CONST.*;
-import static frc.robot.Constants.DRIVE_CONST.*;;
+import frc.robot.RobotContainer;;
 public class Drivebase extends SubsystemBase {
 public WPI_TalonSRX rightEncoded = new WPI_TalonSRX(RIGHT_ENCODED_CAN);
 public WPI_TalonSRX leftEncoded = new WPI_TalonSRX(LEFT_ENCODED_CAN);

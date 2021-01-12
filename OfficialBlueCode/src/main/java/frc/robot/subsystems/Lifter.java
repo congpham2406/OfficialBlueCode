@@ -7,12 +7,14 @@
 
 package frc.robot.subsystems;
 
+import static frc.robot.Constants.ARM_CONST.LIFTER_CAN;
+import static frc.robot.Constants.STICK_CONST.BLUE;
+import static frc.robot.Constants.STICK_CONST.GREEN;
+
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotContainer;
-import frc.robot.Robot;
-import static frc.robot.Constants.STICK_CONST.*;
-import static frc.robot.Constants.ARM_CONST.*;
 
 public class Lifter extends SubsystemBase {
 public WPI_TalonSRX Lifter = new WPI_TalonSRX(LIFTER_CAN);
