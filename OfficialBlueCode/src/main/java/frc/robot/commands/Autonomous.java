@@ -25,7 +25,7 @@ public class Autonomous extends SequentialCommandGroup {
     new GoStraight(drive).withTimeout(3.5),
     new RotateToAngle(drive, -90.0f).withTimeout(5),
     new WaitCommand(0.5),
-    new GoStraight(drive).withTimeout(6) ); 
+    new GoStraight(drive).withTimeout(6)); 
     //Fix the running time
   }
 }
