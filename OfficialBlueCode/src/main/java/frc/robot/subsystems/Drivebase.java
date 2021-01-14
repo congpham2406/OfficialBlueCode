@@ -29,6 +29,7 @@ public WPI_TalonSRX leftFollow = new WPI_TalonSRX(LEFT_FOLLOW_CAN);
     leftFollow.follow(leftEncoded);
     rightFollow.follow(rightEncoded);
     leftEncoded.setInverted(true);
+    leftFollow.setInverted(true);
 
     
   }
@@ -71,9 +72,9 @@ public WPI_TalonSRX leftFollow = new WPI_TalonSRX(LEFT_FOLLOW_CAN);
   @Override
   public void periodic() {
     if (RobotContainer.stick.getRawButton(R1)) {
-    drive(RobotContainer.stick.getRawAxis(1) * 0.75, RobotContainer.stick.getRawAxis(3) * 0.6 );
+    drive(RobotContainer.stick.getRawAxis(1) * 0.6, RobotContainer.stick.getRawAxis(3) * 0.6 );
     }
-    else drive(RobotContainer.stick.getRawAxis(1) * 0.5, RobotContainer.stick.getRawAxis(3) * 0.4 );
+    else drive(RobotContainer.stick.getRawAxis(1) * 0.3, RobotContainer.stick.getRawAxis(3) * 0.3 );
   }
 }
 

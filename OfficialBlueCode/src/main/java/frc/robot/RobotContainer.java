@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.Autonomous;
 import frc.robot.subsystems.Drivebase;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.Grabber;
@@ -30,7 +30,7 @@ public class RobotContainer {
   private final Drivebase drivebase = new Drivebase(); // vscode ngu bo me
   private final Lifter lifter = new Lifter();
   private final Grabber grabber = new Grabber();
-  private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
+  private final Autonomous m_autoCommand = new Autonomous(drivebase, grabber);
 
   public static Joystick stick = new Joystick(0);
 
