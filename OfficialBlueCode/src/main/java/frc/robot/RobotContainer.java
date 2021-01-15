@@ -26,8 +26,8 @@ import frc.robot.subsystems.Lifter;
 public class RobotContainer {
   public static final String Drivebase = null;
 // The robot's subsystems and commands are defined here...
-  private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
-  private final Drivebase drivebase = new Drivebase(); // vscode ngu bo me
+  
+  public final Drivebase drivebase = new Drivebase(); // vscode ngu bo me
   private final Lifter lifter = new Lifter();
   private final Grabber grabber = new Grabber();
   private final Autonomous m_autoCommand = new Autonomous(drivebase, grabber);

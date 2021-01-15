@@ -47,6 +47,6 @@ public final class Constants {
         public static final double kD = 0.000;
         public static final double kToleranceDegrees = 2.0f;
         // degrees / 0.02s
-        public static final double kToleranceAngularVelocity = 0.1;
+        public static final double kToleranceAngularVelocity = 0.08;
     }
 }

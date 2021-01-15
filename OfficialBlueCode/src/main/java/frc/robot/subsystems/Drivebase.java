@@ -13,11 +13,8 @@ import static frc.robot.Constants.DRIVE_CONST.RIGHT_ENCODED_CAN;
 import static frc.robot.Constants.DRIVE_CONST.RIGHT_FOLLOW_CAN;
 import static frc.robot.Constants.STICK_CONST.R1;
 
-import java.net.SocketTimeoutException;
-
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotContainer;;
 public class Drivebase extends SubsystemBase {
@@ -71,10 +68,6 @@ public WPI_TalonSRX leftFollow = new WPI_TalonSRX(LEFT_FOLLOW_CAN);
 // }
   @Override
   public void periodic() {
-    if (RobotContainer.stick.getRawButton(R1)) {
-    drive(RobotContainer.stick.getRawAxis(1) * 0.6, RobotContainer.stick.getRawAxis(3) * 0.6 );
-    }
-    else drive(RobotContainer.stick.getRawAxis(1) * 0.3, RobotContainer.stick.getRawAxis(3) * 0.3 );
   }
 }
 

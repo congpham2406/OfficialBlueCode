@@ -26,25 +26,15 @@ public class Grabber extends SubsystemBase {
   public void grab(double x) {
     Grabber.set(x);
   }
-  public void Auto() {
-    Timer.delay(15);
-    Grabber.set(1);
-    Timer.delay(4);
-    Grabber.stopMotor();
-  }
+  //-1 la mo 1 la dong
+
     @Override
   public void periodic() {
-    if (RobotContainer.stick.getRawButton(RED)) {
+    if (RobotContainer.stick.getRawButton(R2)) {
+    if  (RobotContainer.stick.getRawButton(PINK)) {
       grab(1);
     }
-    else if  (RobotContainer.stick.getRawButton(PINK)) {
-      grab(-1);
-    }
-    else if (RobotContainer.stick.getRawButton(R2)) {
-      grab(1);
-      Timer.delay(4);
-      grab(0);
-    }
+    else grab(-1);}
     else {
       grab(0.0);
     }
