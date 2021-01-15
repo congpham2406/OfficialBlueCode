@@ -19,13 +19,18 @@ import frc.robot.RobotContainer;
 public class Lifter extends SubsystemBase {
 public WPI_TalonSRX Lifter = new WPI_TalonSRX(LIFTER_CAN);
 
+public void lift(double speed)
+{
+  Lifter.set(speed);
+}
+
   @Override
 public void periodic() {
 if (RobotContainer.stick.getRawButton(GREEN)) {
-  Lifter.set(-0.5);
+  Lifter.set(-0.8);
 }
 else if  (RobotContainer.stick.getRawButton(BLUE)) {
-  Lifter.set(0.5);
+  Lifter.set(0.8);
 }
 else {Lifter.set(0);}
   }

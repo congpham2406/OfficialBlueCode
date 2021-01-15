@@ -30,7 +30,7 @@ public class RobotContainer {
   public final Drivebase drivebase = new Drivebase(); // vscode ngu bo me
   private final Lifter lifter = new Lifter();
   private final Grabber grabber = new Grabber();
-  private final Autonomous m_autoCommand = new Autonomous(drivebase, grabber);
+  private final Autonomous m_autoCommand = new Autonomous(drivebase, grabber, lifter);
 
   public static Joystick stick = new Joystick(0);
 
