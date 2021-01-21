@@ -8,9 +8,11 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import frc.robot.subsystems.Drivebase;
+import frc.robot.commands.RotateToAngle;
+
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -47,6 +49,11 @@ public class Robot extends TimedRobot {
     // and running subsystem periodic() methods.  This must be called from the robot's periodic
     // block in order for anything in the Command-based framework to work.
     CommandScheduler.getInstance().run();
+    
+    SmartDashboard.putNumber("yaw", RotateToAngle.ahrs.getYaw());
+    SmartDashboard.putNumber("pitch", RotateToAngle.ahrs.getPitch());
+    SmartDashboard.putNumber("roll", RotateToAngle.ahrs.getRoll());
+    
   }
 
   /**
@@ -105,6 +112,11 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void teleopPeriodic() {
+    if (RobotContainer.stick.getRawButton(6)) {
+      m_robotContainer.drivebase.drive(RobotContainer.stick.getRawAxis(1) * 0.6, RobotContainer.stick.getRawAxis(3) * 0.6 );
+      }
+      else m_robotContainer.drivebase.drive(RobotContainer.stick.getRawAxis(1) * 0.4, RobotContainer.stick.getRawAxis(3) * 0.4 );
+   
   }
 
   @Override

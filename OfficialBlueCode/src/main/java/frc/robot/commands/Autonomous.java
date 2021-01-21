@@ -4,6 +4,7 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import edu.wpi.first.wpilibj2.command.WaitCommand;
 import frc.robot.subsystems.Drivebase;
@@ -18,14 +19,13 @@ public class Autonomous extends SequentialCommandGroup {
   public Autonomous(Drivebase drive, Grabber grab) {
     // Add your commands in the addCommands() call, e.g.
     // addCommands(new FooCommand(), new BarCommand());
-    super(new GoStraight(drive).withTimeout(6), 
-    new WaitCommand(0.5), 
-    new RotateToAngle(drive, 90.0f).withTimeout(5), 
-    new WaitCommand(0.5),
-    new GoStraight(drive).withTimeout(3.5),
-    new RotateToAngle(drive, -90.0f).withTimeout(5),
-    new WaitCommand(0.5),
-    new GoStraight(drive).withTimeout(6) ); 
-    //Fix the running time
+    super
+    (new GoStraight(drive).withTimeout(1),
+    new WaitCommand(1),
+    new RotateToAngle(drive, 90.0).withTimeout(2),
+    new GoStraight(drive).withTimeout(1.8),
+    new WaitCommand(1), 
+    new RotateToAngle(drive, -90.0)
+    );
   }
 }

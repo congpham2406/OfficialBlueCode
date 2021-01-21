@@ -43,10 +43,10 @@ public final class Constants {
         }
     public static final class PID_CONST {
         public static final double kP = 1.0/180;
-        public static final double kI = 1e-3;
-        public static final double kD = 0.00;
+        public static final double kI = 0.000;
+        public static final double kD = 0.000;
         public static final double kToleranceDegrees = 2.0f;
         // degrees / 0.02s
-        public static final double kToleranceAngularVelocity = 1.0f;
+        public static final double kToleranceAngularVelocity = 0.08;
     }
 }
