@@ -6,9 +6,12 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
+import edu.wpi.first.wpilibj2.command.ParallelCommandGroup;
 import edu.wpi.first.wpilibj2.command.WaitCommand;
 import frc.robot.subsystems.Drivebase;
 import frc.robot.subsystems.Grabber;
+import frc.robot.subsystems.Lifter;
+
 
 
 // NOTE:  Consider using this command inline, rather than writing a subclass.  For more
@@ -16,16 +19,16 @@ import frc.robot.subsystems.Grabber;
 // https://docs.wpilib.org/en/stable/docs/software/commandbased/convenience-features.html
 public class Autonomous extends SequentialCommandGroup {
   /** Creates a new Autonomous. */
-  public Autonomous(Drivebase drive, Grabber grab) {
+  public Autonomous(Drivebase drive, Grabber grab, Lifter lifter) {
     // Add your commands in the addCommands() call, e.g.
     // addCommands(new FooCommand(), new BarCommand());
     super
     (new GoStraight(drive).withTimeout(1),
     new WaitCommand(1),
     new RotateToAngle(drive, 90.0).withTimeout(2),
-    new GoStraight(drive).withTimeout(1.8),
+    new GoStraight(drive).withTimeout(1),
     new WaitCommand(1), 
-    new RotateToAngle(drive, -90.0)
+    new g2esport(drive, lifter)
     );
   }
 }
